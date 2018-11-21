@@ -1,0 +1,14 @@
+import cv2 as cv
+
+arc = cv.imread("E:/pythonworks/picture.jpg")
+#（“E`````”,0）以灰度的方式调用。
+#调用图片给arc
+cv.namedWindow("image",cv.WINDOW_AUTOSIZE)
+#建造一个窗口名字为“image1”，用cv.WINDOW_NORMAL就可以改变窗口大小
+cv.imshow("image",arc)
+#显示图片，来自arc，图片命名为image
+cv.waitKey(10000)
+#键盘绑定函数，毫秒级尺度，函数等待10秒，按下键盘任意键，图像执行下一个命令。如果是0，将永远等待按键。
+cv.imwrite("E:/pythonworks/mi.png",arc)
+cv.destroyAllWindows()
+#关闭任何窗口image，如果（），则关闭所有。
